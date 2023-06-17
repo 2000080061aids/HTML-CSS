@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid</title>
+        <style>
+            .grid-container
+            {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                        "header header header header header"
+                        "sidebar . main main aside"
+                        "sidebar . main main aside"
+                        "footer footer footer footer footer";
+                grid-gap: 10px;
+            }
+            .aside
+            {
+                grid-area: aside;
+            }
+            .header
+            {
+                grid-area: header;
+            }
+            .sidebar
+            {
+                grid-area: sidebar;
+            }
+            .main
+            {
+                grid-area: main;
+            }
+            .footer
+            {
+                grid-area: footer;
+            }
+            .item
+            {
+                background-color: #ccc;
+                padding: 20px;
+                border: 2px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="item header">Header</div>
+            <div class="item sidebar">Sidebar</div>
+            <div class="item main">Main</div>
+            <div class="item aside">Aside</div>
+            <div class="item footer">Footer</div>
+        </div>
+    </body>
+</html>
